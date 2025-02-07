@@ -1,0 +1,10 @@
+The following CSS code results in unexpected behavior in some browsers:
+
+```css
+div {
+  width: 50%;
+  float: left;
+}
+```
+
+The issue is that if the parent element doesn't have a specified width, the `50%` width will be calculated relative to the browser window width instead of the parent element's width.
