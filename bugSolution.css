@@ -1,0 +1,30 @@
+To fix this, explicitly set a width for the parent element.  If you want the children to take up the full width of the parent, consider using flexbox or grid:
+
+```css
+/* Solution using a specified width for the parent */
+div.parent {
+  width: 800px; /* Or any other specific width */
+}
+div.child {
+  width: 50%;
+  float: left;
+}
+
+/* Solution using flexbox */
+div.parent {
+  display: flex;
+}
+div.child {
+  flex: 1;
+}
+
+/* Solution using grid */
+div.parent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+div.child {
+  /* No need to specify width here */
+}
+```
+This ensures that the 50% width is calculated correctly.
